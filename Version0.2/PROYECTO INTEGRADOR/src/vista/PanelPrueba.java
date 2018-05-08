@@ -1,0 +1,68 @@
+package vista;
+
+import java.awt.Dimension;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class PanelPrueba extends JPanel{
+	private JTextArea txtrMensaje;
+	
+	public static JTextField CampoCodNum;
+	public static JTextField CampoNumExp;
+	public static JTextField CampoNombre;
+	public static JTextField CampoApellido;
+
+	public PanelPrueba() {
+		super();
+		
+		inicializar();
+	}
+	
+	private void inicializar() {
+		setPreferredSize(new Dimension(435, 270));
+		
+		setLayout(null);
+		
+		/*JLabel lblCodigoNumerico = new JLabel("Codigo Numerico");
+		lblCodigoNumerico.setBounds(12, 13, 109, 16);
+		contentPane.add(lblCodigoNumerico);*/
+		
+		JLabel lblNumeroExpediente = new JLabel("Numero Expediente");
+		lblNumeroExpediente.setBounds(12, 67, 134, 16);
+		add(lblNumeroExpediente);
+		
+		JLabel lblNombre = new JLabel("Nombre");
+		lblNombre.setBounds(12, 122, 109, 16);
+		add(lblNombre);
+		
+		JLabel lblApellidos = new JLabel("Apellido");
+		lblApellidos.setBounds(12, 177, 56, 16);
+		add(lblApellidos);
+		
+		
+		CampoCodNum = new JTextField();
+		CampoCodNum.setBounds(175, 13, 116, 22);
+		add(CampoCodNum);
+		CampoCodNum.setColumns(10);
+		
+		CampoNumExp = new JTextField();
+		CampoNumExp.setBounds(175, 64, 116, 22);
+		add(CampoNumExp);
+		CampoNumExp.setColumns(10);
+		
+		CampoNombre = new JTextField();
+		CampoNombre.setBounds(175, 119, 116, 22);
+		add(CampoNombre);
+		CampoNombre.setColumns(10);
+		
+		CampoApellido = new JTextField();
+		CampoApellido.setBounds(175, 174, 116, 22);
+		add(CampoApellido);
+		CampoApellido.setColumns(10);
+		
+		
+	}
+}
